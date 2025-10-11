@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+</head>
+<body
+    {% if exception_occured %}
+        style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;"
+    {% else  %}
+        style="background: url({{image_url}}) no-repeat center center fixed;"
+    {% endif %}
+>
+    <div class="container">
+        <h1>Weather App</h1>
+    </div>
+
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="city" id="city" placeholder="Enter city">
+        <button type="submit">search</button>
+    </form>
+    <h2>{{temp}}</h2>
+    <h2>{{city}}</h2>
+    <p>{{description}}</p>
+    <p>
+        <img src="http://openweathermap.org/img/w/{{icon}}.png" alt="" width="100px">
+    </p>
+    <p>{{day}}</p>
+    {% if exception_occured %}
+        <script>
+            window.onload=function(){
+                alert("error while fetching data for {{city}}, result instead for indore")
+            }
+        </script>
+    {%  endif %}
+</body>
+</html>
+ <!-- AIzaSyBy71vZ-_pEfRVJR0cl8sDHeoHDyUk9xrI  -->
+
+ <!-- <script async src="https://cse.google.com/cse.js?cx=2071d33066d48496b">
+</script>
+<div class="gcse-search"></div> -->

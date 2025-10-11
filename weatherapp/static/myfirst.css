@@ -1,0 +1,77 @@
+/* Apply a full-screen background image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    border-radius: 10px;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.container h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #f1c40f;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Weather results */
+h2, p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #161616;
+}
+
+p img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+}
